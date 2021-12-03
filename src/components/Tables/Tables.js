@@ -1,5 +1,9 @@
 
+import TableData from '../../JsonData/TableData/TableData'
+
 const  Tables = () =>{
+    const  data = TableData[0]
+    console.log(data)
     return(
         <>
 
@@ -35,7 +39,20 @@ const  Tables = () =>{
                                                 <th>Salary</th>
                                             </tr>
                                         </tfoot>
-                                     <tbody></tbody>
+                                     <tbody>
+                                        {data.name.map((item ,key) =>{
+                                            return(
+                                                <tr>
+                                                    <td key={key}>{item}</td>
+                                                    <td>{data.position[key]}</td>
+                                                    <td>{data.office[key]}</td>
+                                                    <td>{data.age[key]}</td>
+                                                    <td>{data.startdate[key]}</td>
+                                                    <td>{data.salary[key]}</td>
+                                                </tr>
+                                                    )
+                                                })}
+                                     </tbody>
                                     </table>
                                 </div>
                             </div>

@@ -7,6 +7,7 @@ import Border from '../components/Border/Border'
 import Animations from '../components/Animations/Animations'
 import Other from '../components/Other/Other'
 import Tables from '../components/Tables/Tables'
+import Charts from '../components/Charts/Charts'
 
 const rotus = ()=>{
 
@@ -20,6 +21,8 @@ const rotus = ()=>{
                 <Route path="/animations"  element={<Animations/>} />
                 <Route path="/other"  element={<Other/>} />
                 <Route path="/Tables"  element={<Tables/>} />
+                <Route path="/charts"  element={<Charts/>} />
+
           </Routes>
 
         </>

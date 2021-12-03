@@ -8,9 +8,9 @@ import Tables from '../components/Tables/Tables'
 
 const MenuJson = [      
                 {
-                    elementheading:'Interface ',
+                    elementheading:'Interface',
                     items_perent:'Components',
-                    icon:'fa-cog',
+                    icon:'fa-cog1',
                     items_child:[
                         {
                             name:'Buttons',

@@ -5,7 +5,7 @@ import AdminLayout  from './layouts/Admin'
 function App() {
   return (
     <>
-  <AdminLayout />
+    <AdminLayout />
     </>
       
     
