@@ -1,6 +1,6 @@
 
 import MenuJson from '../../../../JsonData/MenuJson'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
  const Tabels = () =>{
  const MenuData =  MenuJson[1].items_inner[1]
 

@@ -26,6 +26,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   }
   return s.join(dec);
 }
+window.addEventListener('load', function() {
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
@@ -108,4 +109,5 @@ var myBarChart = new Chart(ctx, {
       }
     },
   }
+});
 });

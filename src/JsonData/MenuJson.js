@@ -10,16 +10,16 @@ const MenuJson = [
                 {
                     elementheading:'Interface',
                     items_perent:'Components',
-                    icon:'fa-cog1',
+                    icon:'fa-cog',
                     items_child:[
                         {
                             name:'Buttons',
-                            path:'/buttons',
+                            path:'./buttons',
                             component: buttons,
                         },
                         {
                             name:'Cards',
-                            path:'/cards',
+                            path:'./cards',
                             component: Cards,
                         }
                     ],
@@ -30,24 +30,24 @@ const MenuJson = [
                             items_child:[
                                 {
                                     name:'Colors',
-                                    path:'/colors',
+                                    path:'./colors',
                                     component: Color
 
                                 },
                                 {
                                     name:'Borders',
-                                    path:'/borders',
+                                    path:'./borders',
                                     component: Border
                                 },
                                 {
                                     name:'Animations',
-                                    path:'/animations',
+                                    path:'./animations',
                                     component: Animations
         
                                 },
                                 {
                                     name:'Other',
-                                    path:'/other',
+                                    path:'./other',
                                     component: Other
         
                                 }
@@ -63,40 +63,40 @@ const MenuJson = [
                     items_child:[
                         {
                             name:'Login',
-                            path:'/login'
+                            path:'./login'
 
                         },
                         {
                             name:'Register',
-                            path:'/register'
+                            path:'./register'
 
                         },
                         {
                             name:'Forgot Password',
-                            path:'/forgot-password'
+                            path:'./forgot-password'
                         },
                         {
                             name:'404 Page',
-                            path:'/404-Page'
+                            path:'./404-Page'
 
                         },
                         {
                             name:'Blank Page',
-                            path:'/Blank-Page'
+                            path:'./Blank-Page'
                         }
                     ],
                     items_inner:[
                         {
                             items_perent:'Charts',
                             icon:'fa-chart-area',
-                            path:'/charts'
+                            path:'./charts'
 
         
                         },
                         {
                             items_perent:'Tables',
                             icon:'fa-table',
-                            path:'/tables',
+                            path:'./tables',
                             component: Tables,
         
                         }

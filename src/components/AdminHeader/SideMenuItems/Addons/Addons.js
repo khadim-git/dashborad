@@ -1,5 +1,5 @@
 import MenuJson from '../../../../JsonData/MenuJson'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Addons = () =>{
 const MenuData =  MenuJson[1]
