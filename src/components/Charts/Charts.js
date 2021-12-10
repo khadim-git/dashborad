@@ -1,3 +1,5 @@
+import AreaChart from './AreaChart'
+import BarChart from './BarChart'
 const Charts = () =>{
     return(
         <div className="container-fluid">
@@ -17,7 +19,7 @@ const Charts = () =>{
                                 </div>
                                 <div className="card-body">
                                     <div className="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
+                                        <AreaChart/>
                                     </div>
                                     <hr/>
                                     Styling for the area chart can be found in the
@@ -32,7 +34,7 @@ const Charts = () =>{
                                 </div>
                                 <div className="card-body">
                                     <div className="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
+                                        <BarChart />
                                     </div>
                                     <hr/>
                                     Styling for the bar chart can be found in the

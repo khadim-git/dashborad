@@ -16,7 +16,7 @@ console.log(MenuData.items_inner[0])
                     <i className={`fas fa-fw ${MenuData.icon}`}></i>
                     <span>{MenuData.items_perent}</span>
                 </a>
-                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    {MenuData.items_child && <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Custom Components:</h6>
                             {MenuData.items_child.map((items,key) =>{
@@ -29,7 +29,7 @@ console.log(MenuData.items_inner[0])
                             })}
 
                         </div>
-                    </div>
+                    </div> }
                 </li>
 
                 <li className="nav-item">

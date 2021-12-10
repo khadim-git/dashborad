@@ -9,103 +9,87 @@ import Tables from '../components/Tables/Tables'
 const MenuJson = [      
                 {
                     elementheading:'Interface',
-                    items_perent:'Components',
-                    icon:'fa-cog',
-                    items_child:[
+                    items:[
                         {
-                            name:'Buttons',
-                            path:'./buttons',
-                            component: buttons,
-                        },
-                        {
-                            name:'Cards',
-                            path:'./cards',
-                            component: Cards,
-                        }
-                    ],
-                    items_inner:[
-                        {
-                            items_perent:'Utilities',
-                            icon:'fa-wrench',
+                            items_perent:'Components',
+                            ariacontrols:'collapseTwo',
+                            datatarget:'#collapseTwo',
+                            id:'collapseTwo',
+                            icon:'fa-cog',
                             items_child:[
                                 {
-                                    name:'Colors',
-                                    path:'./colors',
-                                    component: Color
-
+                                    name:'Buttons',
+                                    path:'./buttons',
+                                    component: buttons,
                                 },
                                 {
-                                    name:'Borders',
-                                    path:'./borders',
-                                    component: Border
-                                },
-                                {
-                                    name:'Animations',
-                                    path:'./animations',
-                                    component: Animations
-        
-                                },
-                                {
-                                    name:'Other',
-                                    path:'./other',
-                                    component: Other
-        
+                                    name:'Cards',
+                                    path:'./cards',
+                                    component: Cards,
                                 }
+                            ],
+                        },
+                        {
+                         
+                                    items_perent:'Utilities',
+                                    ariacontrols:'collapseUtilities',
+                                    datatarget:'#collapseUtilities',
+                                    icon:'fa-wrench',
+                                    id:'collapseUtilities',
+                                    items_child:[
+                                        {
+                                            name:'Colors',
+                                            path:'./colors',
+                                            component: Color
+
+                                        },
+                                        {
+                                            name:'Borders',
+                                            path:'./borders',
+                                            component: Border
+                                        },
+                                        {
+                                            name:'Animations',
+                                            path:'./animations',
+                                            component: Animations
+                
+                                        },
+                                        {
+                                            name:'Other',
+                                            path:'./other',
+                                            component: Other
+                
+                                        }
+                                    ]
+                        }
+                    ]
+                                
+                    },
+                        {
+                            elementheading:'Addons',
+                            items:[
+                                {
+                                    items_perent:'Charts',
+                                    icon:'fa-chart-area',
+                                    path:'./charts'
+
+                
+                                },
+                                {
+                                    items_perent:'Tables',
+                                    icon:'fa-table',
+                                    path:'./tables',
+                                    component: Tables,
+                
+                                }
+
                             ]
-                        }
-                    ]
+                        
+                 
+        
                 },
 
-                {
-                    elementheading:'Addons',
-                    items_perent:'Pages',
-                    icon:'fa-folder',
-                    items_child:[
-                        {
-                            name:'Login',
-                            path:'./login'
-
-                        },
-                        {
-                            name:'Register',
-                            path:'./register'
-
-                        },
-                        {
-                            name:'Forgot Password',
-                            path:'./forgot-password'
-                        },
-                        {
-                            name:'404 Page',
-                            path:'./404-Page'
-
-                        },
-                        {
-                            name:'Blank Page',
-                            path:'./Blank-Page'
-                        }
-                    ],
-                    items_inner:[
-                        {
-                            items_perent:'Charts',
-                            icon:'fa-chart-area',
-                            path:'./charts'
-
-        
-                        },
-                        {
-                            items_perent:'Tables',
-                            icon:'fa-table',
-                            path:'./tables',
-                            component: Tables,
-        
-                        }
-
-                    ]
-
-
-                },
-
+                
 
             ]
 
