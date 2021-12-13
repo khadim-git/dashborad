@@ -4,7 +4,6 @@ import Admininfo from './AdminInfo/AdminInfo'
 import MenuJson from '../../../JsonData/MenuJson'
 import { Link} from 'react-router-dom';
 const SideMenuItems = () =>{
-    console.log(MenuJson)
     return(
         <>
         <Admininfo/>
@@ -12,13 +11,13 @@ const SideMenuItems = () =>{
         MenuJson.map((item,key) =>{
             return(
                 <>
-                  <hr className="sidebar-divider"/>
+                  <hr className="sidebar-divider" key={key}/>
                             <div className="sidebar-heading">
                             {item.elementheading}
                             </div>
                     {item.items.map((element,key) =>{
                            return(
-                                <li className="nav-item">
+                                <li className="nav-item" key={key}>
                                     {
                                     element.datatarget ?  (<a className="nav-link collapsed" href="/" data-toggle="collapse" data-target={element.datatarget}
                                         aria-expanded="true" aria-controls={element.ariacontrols}>
@@ -41,7 +40,7 @@ const SideMenuItems = () =>{
                                             {element.items_child.map((Childitems,key) =>{
                                                 return(
                                                     <>
-                                                    <Link  className="collapse-item" to={Childitems.path}> {Childitems.name}</Link>
+                                                    <Link  className="collapse-item" key={key} to={Childitems.path}> {Childitems.name}</Link>
                                                     </>
                                                 )
 

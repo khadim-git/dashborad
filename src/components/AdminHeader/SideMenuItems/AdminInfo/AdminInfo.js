@@ -3,7 +3,6 @@ import LoginJson from '../../../../JsonData/LoginJson/LoginJson'
 
  const AdminInfo = () =>{
 const [data, setinfo] = useState(LoginJson)
- console.log(data);
 
     const  isLoggedIn =  localStorage.getItem("LoginToken");
     if (isLoggedIn) {

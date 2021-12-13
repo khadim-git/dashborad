@@ -3042,6 +3042,9 @@ input[type="button"].btn-block {
   right: 0;
   left: auto;
 }
+.static-top .dropdown-menu-right{
+  left: -57px !important;
+}
 
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
@@ -10969,11 +10972,13 @@ form.user .btn-user {
 }
 
 .error {
-  color: #5a5c69;
-  font-size: 7rem;
+  font-size: 1rem;
   position: relative;
   line-height: 1;
   width: 12.5rem;
+  color: red;
+  text-transform: capitalize;
+  padding: 10px;
 }
 
 @-webkit-keyframes noise-anim {

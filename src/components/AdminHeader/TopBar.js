@@ -9,6 +9,7 @@ import LoginJson from '../../JsonData/LoginJson/LoginJson'
         localStorage.setItem('LoginToken', '');
         if (isLoggedIn === '') {
             navigate('/login');
+            console.log('dsfsdf');
         }
     }
 
