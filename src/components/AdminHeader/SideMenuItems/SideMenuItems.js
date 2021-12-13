@@ -1,12 +1,13 @@
 
 import SidebarToggleButton from './SidebarToggleButton/SidebarToggleButton'
+import Admininfo from './AdminInfo/AdminInfo'
 import MenuJson from '../../../JsonData/MenuJson'
 import { Link} from 'react-router-dom';
 const SideMenuItems = () =>{
     console.log(MenuJson)
     return(
         <>
-
+        <Admininfo/>
         {
         MenuJson.map((item,key) =>{
             return(
