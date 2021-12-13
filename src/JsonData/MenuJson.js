@@ -6,7 +6,16 @@ import Animations from '../components/Animations/Animations'
 import Other from '../components/Other/Other'
 import Tables from '../components/Tables/Tables'
 
-const MenuJson = [      
+const MenuJson = [ 
+                { 
+                    items:[
+                        {
+                            items_perent:'Dashboard',
+                            icon:'fa-tachometer-alt',
+                            path:'./dashboard'
+                        }
+                    ]
+                },     
                 {
                     elementheading:'Interface',
                     items:[

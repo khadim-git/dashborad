@@ -1,11 +1,4 @@
 
-import AdminInfo from './AdminInfo/AdminInfo'
-import Dashboard from './Dashboard/Dashboard'
-import InterFace from './InterFace/InterFace'
-import Addons from './Addons/Addons'
-import Tables from './Tables/Tables'
-import Charts from './Charts/Charts'
-
 import SidebarToggleButton from './SidebarToggleButton/SidebarToggleButton'
 import MenuJson from '../../../JsonData/MenuJson'
 import { Link} from 'react-router-dom';
@@ -22,15 +15,19 @@ const SideMenuItems = () =>{
                             <div className="sidebar-heading">
                             {item.elementheading}
                             </div>
-                    {
-                      item.items.map((element,key) =>{
+                    {item.items.map((element,key) =>{
                            return(
                                 <li className="nav-item">
-                                    {element.datatarget ?  (<a className="nav-link collapsed" href="/" data-toggle="collapse" data-target={element.datatarget}
+                                    {
+                                    element.datatarget ?  (<a className="nav-link collapsed" href="/" data-toggle="collapse" data-target={element.datatarget}
                                         aria-expanded="true" aria-controls={element.ariacontrols}>
                                         <i className={`fas fa-fw ${element.icon}`}></i>
                                         <span>{element.items_perent}</span>
-                                        </a> ): (<Link to={element.path} >{element.name}</Link> )}
+                                        </a> ) : (<Link className='nav-link' to={element.path} >
+                                        <i className={`fas fa-fw ${element.icon}`}></i>
+                                        <span>{element.items_perent}</span>
+                                            </Link> )
+                                        }
                                       {/* <a className="nav-link collapsed" href="/" data-toggle="collapse" data-target={element.datatarget}
                                         aria-expanded="true" aria-controls={element.ariacontrols}>
                                         <i className={`fas fa-fw ${element.icon}`}></i>

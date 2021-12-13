@@ -11,11 +11,15 @@ import Animations from './components/Animations/Animations'
 import Other from './components/Other/Other'
 import Tables from './components/Tables/Tables'
 import Charts from './components/Charts/Charts'
+import Dashboard from './components/Dashboard/Dashboard'
+
 function App() {
   return (
     <>
     {/* <AdminLayout/> */}
     <Routes>
+    <Route exact path="/login" element={<Login/>}/>
+
       <Route exact path="/" element={<Login/>}/>
       <Route path="/admin" element={<AdminLayout/>}>
                 <Route path="buttons"  element={<Buttons/>} />
@@ -26,6 +30,7 @@ function App() {
                 <Route path="other"  element={<Other/>} />
                 <Route path="Tables"  element={<Tables/>} />
                 <Route path="charts"  element={<Charts/>} />
+                <Route path="dashboard"  element={<Dashboard/>} />
       </Route>
     </Routes>
     </>

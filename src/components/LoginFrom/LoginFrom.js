@@ -29,7 +29,7 @@ const LoginFrom = () =>{
                     localStorage.setItem('LoginToken', loginlist.LoginToken);
                     const  isLoggedIn =  localStorage.getItem("LoginToken");
                 if (isLoggedIn) {
-                    navigate('/admin');
+                    navigate('/admin/dashboard');
                 }
                 else{
                     navigate('/login');

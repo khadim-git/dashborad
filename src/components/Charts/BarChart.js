@@ -1,31 +1,89 @@
 import React from "react";
-// import { bar } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart,
+  ArcElement,
+  LineElement,
+  BarElement,
+  PointElement,
+  BarController,
+  BubbleController,
+  DoughnutController,
+  LineController,
+  PieController,
+  PolarAreaController,
+  RadarController,
+  ScatterController,
+  CategoryScale,
+  LinearScale,
+  LogarithmicScale,
+  RadialLinearScale,
+  TimeScale,
+  TimeSeriesScale,
+  Decimation,
+  Filler,
+  Legend,
+  Title,
+  Tooltip
+} from 'chart.js';
 
-class ChartsPage extends React.Component {
-state = {
-  dataDoughnut: {
-    labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-    datasets: [
-      {
-        data: [300, 50, 100, 40, 120],
-        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-        hoverBackgroundColor: [
-          "#FF5A5E",
-          "#5AD3D1",
-          "#FFC870",
-          "#A8B3C5",
-          "#616774"
-        ]
+const BarChart = () => {
+  Chart.register(
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip
+  );
+  const dataBar = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [{
+      label: "Revenue",
+      backgroundColor: "#4e73df",
+      hoverBackgroundColor: "#2e59d9",
+      borderColor: "#4e73df",
+      data: [4215, 5312, 6251, 7841, 9821, 14984],
+    }],
+  };
+
+  const options = {
+    plugins: {
+      datalabels: {
+        display: true,
+        color: "black",
+        align: "end",
+        anchor: "end",
+        borderWidth: 1,
+        font: { size: "14" }
       }
-    ]
-  }
-}
+    },
+    legend: {
+      display: true
+    }
+  };
 
-render() {
     return (
-      <bar data={this.state.dataDoughnut} options={{ responsive: true }} />
-    );
+      <Bar data={dataBar} options={options} width={100} height={50} />
+      )
   }
-}
 
-export default ChartsPage;
+
+export default BarChart;
